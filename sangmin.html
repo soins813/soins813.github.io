@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <title>Google mail</title>
+
+  <style>
+  
+  * {
+  box-sizing: border-box;
+  }
+  body{
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  }
+  header{
+  background-color: #DA4336;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  }
+  .list1 li{
+  display: inline;
+  }
+  ul{
+  list-style: none;
+  padding: 0;
+  }
+.icon1{
+float: left;
+padding: 16px 0 16px 1em;
+margin 1em;
+}
+.icon2{
+position: fixed;
+top: 16px;
+left: 40%;
+right: 60%;
+}
+div.topicon{
+position: fixed;
+top: 0;
+right: 0;
+margin-right: 20px;
+}
+.topicon li{
+padding-left: 8px;
+}
+h1{
+color: white;
+float: left;
+padding: 16px 0 16px 1.5em;
+margin: 0;
+font-size: 12pt;
+}
+
+
+section.side {
+            position: absolute;
+            top: 52px;
+            left: 0;
+            width: 64px;
+            bottom: 0;
+            background-color: white;
+        }
+        section.mainarea {
+            position: absolute;
+            top: 52px;
+            left: 64px;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            box-shadow: -1px 0px 6px #CCC;
+        }
+
+        section.list,
+        section.content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: white;
+            box-shadow: -1px 0px 6px #CCC;
+            overflow-y: scroll;
+        }
+
+        section.list {
+            width: 40%;
+            left: 0;
+            z-index: 1;
+         float: left;
+        }
+        section.content {
+            width: 60%;
+            right: 0;
+         padding: 0px 30px 0 30px;
+        }
+      .subicon{
+      position: absolute;
+      top: 20px;
+      left: 18px;
+      line-height: 2;
+      }
+      .fixicon{
+      position: absolute;
+      bottom: 10px;
+      left: 18px;
+      line-height: 2;
+      }
+      .f1{
+      border-bottom: 1px solid #eee;
+      height: 65px;
+      background-color: white;
+      padding: 0;
+      margin: 0;
+      }
+      .sf1{
+      border-bottom: 1px solid #eee;
+      border-left: 3px solid #3a80f6;
+      height: 65px;
+      background-color: #e3edff;
+      padding: 0;
+      padding-left: 8px;
+      margin: 0;
+      }
+      .sf1 img{
+      padding-bottom: 12px;
+      }
+
+      .f1 img{
+      float: left;
+      padding: 19px 10px 19px 10px;
+      }
+      h2, p{
+      margin: 0;
+      display: inline-block;
+      font-size: 80%;
+      }
+      .l1{
+      float: right;
+      padding: 0;ed
+      display: inline-block;
+      margin-top: 18px;
+      margin-right: 10px;
+      
+
+      }
+      .t1{
+      
+      display: inline-block;
+      margin-top: 5px;
+      }
+      .boardtype{
+      display: inline-block;
+      float: left;
+      padding: 20px 0 20px 10px;
+      border-bottom: 2px solid #ddd;
+      height: 80px;
+      width: 100%;
+      font-size: 15pt;
+      }
+      
+      span{
+      margin-left: 8px;
+      padding: 2px;
+      font-size: 80%;
+      }
+      .box1{
+      background-color: yellow;
+      color: black;
+      }
+      .box2{
+      background-color: red;
+      color: black;
+      }
+      .boardtype img{
+      float: right;
+      padding: 0;
+      padding-right: 10px;
+      }
+      .panelist{
+      display: inline-block; 
+      height: 80px;
+      width: 100%;
+      border-bottom: 2px solid #ddd;
+      }
+      .panelist img{
+      float: left;
+      padding: 23px 10px 23px 10px;
+      }
+      .t2{
+      display: inline-block;
+      padding-top: 10px;
+      }
+      .l2{
+      color: gray;
+      font-size: 60%;
+      float: right;
+      padding: 23px 10px 23px 10px;
+      display: inline-block;
+      
+      }
+      a{
+      text-decoration:none;
+      }
+      .flnalt2{
+      margin: 0;
+      font-size: 100%;
+      padding: 0;
+      }
+      .l3, .flnalicon li{
+      display: inline-block;
+      float: right;
+      padding: 0;
+      margin-bottom: 10px;
+      }
+      .flnalicon li img{
+      padding: 10px 0 0 20px;
+      }
+      
+      .write{
+      border-bottom: 2px solid #ddd;
+      height: 80px;
+      
+      }
+      .write a{
+      display: inline-block;
+      font-size: 80%;
+      padding-top: 15px;
+      }
+      
+      .play li{
+      display: inline-block;
+      text-align: center;
+      position: absolute;   
+      bottom: 30;
+      }
+      .q1{
+      left: 15.5%;
+      }
+      .q2{
+      right: 50%;
+      }
+      .q3{
+      right: 20%;
+      }
+      .circle{
+      position: fixed;
+      bottom: 30px;
+      left: 35%;
+      }
+      .regis{
+      font-size: 90%;
+      margin: 0;
+      }
+      .subicon img, .fixicon img, .circle{
+      width: 24px;
+      height: 24px;
+      border-radius: 20px;
+      }
+      .man{
+      width: 44px;
+      height: 62px;
+      border-radius: 20px;
+      }
+
+@media screen and (max-width:750px){
+section.list {
+            width: 100%;
+            left: 0;
+            z-index: 1;
+         }
+ 
+ section.content {
+         display: none;
+         }
+.circle{
+         left: 75%;
+         }
+      
+   
+}
+  </style>
+    </head>
+  <body>
+  <header>
+  <div class="icon1"><img src="http://google.github.io/material-design-icons/action/svg/ic_reorder_24px.svg" alt=""></div>
+  <h1>Primary</h1>
+  <img class="icon2" src="http://google.github.io/material-design-icons/action/svg/ic_search_24px.svg" alt="">
+  <div class="topicon">
+  <ul class="list1">
+  <li><img src="http://google.github.io/material-design-icons/content/svg/ic_add_box_24px.svg" alt=""></li>
+  <li><img src="http://google.github.io/material-design-icons/action/svg/ic_delete_24px.svg" alt=""></li>
+  <li><img src="http://google.github.io/material-design-icons/content/svg/ic_mail_24px.svg" alt=""></li>
+  <li><img src="http://google.github.io/material-design-icons/content/svg/ic_archive_24px.svg" alt=""></li>
+  <li><img src="http://google.github.io/material-design-icons/navigation/svg/ic_more_vert_24px.svg" alt=""></li>
+  </ul>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+ <section class="side pane">
+ 
+ <ul class="subicon">
+  <li><img src="http://postfiles4.naver.net/20141106_195/yuyukgh_1415210224828LVs7Y_JPEG/img.jpg?type=w3" alt=""></li>
+  <li><img src="http://google.github.io/material-design-icons/hardware/svg/ic_desktop_windows_24px.svg" alt=""></li>
+  <li><img src="http://google.github.io/material-design-icons/social/svg/ic_people_24px.svg" alt=""></li>
+  <li><img src="http://google.github.io/material-design-icons/maps/svg/ic_local_offer_24px.svg" alt=""></li>
+  <li><img src="http://google.github.io/material-design-icons/alert/svg/ic_warning_24px.svg" alt=""></li>
+</ul>
+
+<ul class="fixicon">
+  <li><img src="http://postfiles4.naver.net/20141106_195/yuyukgh_1415210224828LVs7Y_JPEG/img.jpg?type=w3" alt=""></li>
+  <li><img src="http://postfiles4.naver.net/20141106_195/yuyukgh_1415210224828LVs7Y_JPEG/img.jpg?type=w3" alt=""></li>
+</ul>
+</section>
+ 
+ 
+ 
+ 
+    <section class="mainarea">
+        <section class="list pane">
+         <img class="circle" src="http://postfiles4.naver.net/20141106_195/sangmin_1415210224828LVs7Y_JPEG/img.jpg?type=w3" alt="">
+
+            <ul>
+         
+                <li><div class="f1">
+            <img src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+            <div class="t1">
+            <h2>Social</h2><br>
+            <p>하하</p>
+            </div>
+            <div class="l1">
+            1 new
+            </div>
+            </div>
+            </li>
+      
+            <li>
+            <div class="f1">
+            <img src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+            <div class="t1">
+            <h2>Promotions</h2><br>
+            <p>Zagat, Google Offers</p>
+            </div>
+            <div class="l1">
+            2 new
+            </div>
+            </div>
+            </li>
+            
+              <li><div class="f1">
+            <img src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+            <div class="t1">
+            <h2>Updates</h2><br>
+            <p>Google Play</p>
+            </div>
+            <div class="l1">
+            1 new
+            </div>
+            </div>
+            </li>
+              <li><div class="f1">
+            <img class="man" src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+            <div class="t1">
+            <h2>Andy Brown</h2><br>
+            <p>Bring your Parents to Work Day!<br>Hey! what do you think about a Team Lunch; Parent...</p>
+            </div>
+            <div class="l1">
+            wark
+            </div>
+            </div>
+            </li>  <li><div class="f1">
+            <img class="man" src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+            <div class="t1">
+            <h2>Keri Anderson<br>Picture From last satalday</h2><br>
+            <p>check ous the new friends we made. merrff and i can into him</p>
+            </div>
+            <div class="l1">
+            star
+            </div>
+            </div>
+            </li>  <li><div class="sf1">
+            <img class="man" src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+            <div class="t1">
+            <h2>Regis, Peter, Rachel3<br><span class="regis">Board game night?</span></h2><br>
+            <p>sun day</p>
+            </div>
+            <div class="l1">
+            text
+            </div>
+            </div>
+            </li>  
+      
+         
+            </ul>
+          
+
+        </section>
+        <section class="content pane">
+            <ul class="w0">
+         <li class="w1">
+         
+         <div class="boardtype">Board game night
+         <span class="box1">fun</span> 
+         <span class="box2">inbox</span>
+         <img src="http://google.github.io/material-design-icons/toggle/svg/ic_star_24px.svg" alt="">
+         </div>
+         
+         </li>
+         <li class="w2">
+         
+         <div class="panelist">
+         <img src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+         <div class="t2">
+         <h2>Realer maxon</h2><br>
+         <p>hi my name is mr.kim. what do u like? </p>
+         </div>
+         <div class="l2">
+         Step 29
+         </div>
+         </div>
+         
+         </li>
+         
+            <li class="w2">
+         
+         <div class="panelist">
+         <img src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+         <div class="t2">
+         <h2>Peter maxim</h2><br>
+         <p>hi my name is mr.kim. what do u like? </p>
+         </div>
+         <div class="l2">
+         Step 29
+         </div>
+         </div>
+         
+         </li>
+         
+            <li class="w2">
+         
+         <div class="panelist">
+         <img src="http://google.github.io/material-design-icons/action/svg/ic_account_box_24px.svg" alt="">
+         <div class="t2">
+         <h2>Rachel shin</h2><br>
+         <p><span class="flnalt2">to me<br>
+         sep 29</span> <a href="#">View detalls</a></p>
+         </div>
+         <div class="l3">
+         <ul class="flnalicon">
+         <li><img src="http://google.github.io/material-design-icons/navigation/svg/ic_more_vert_24px.svg" alt=""></li>
+         <li><img src="http://google.github.io/material-design-icons/content/svg/ic_forward_24px.svg" alt=""></li>
+         <li><img src="http://google.github.io/material-design-icons/content/svg/ic_reply_24px.svg" alt=""></li>
+         </ul>
+         </div>
+         </div>
+         
+         </li>
+         
+      
+         </ul>
+            <div class="write">
+            <h2>time wait for no one and salsa.</h2><br>
+            <a href="#">▶Show quoted text</a>
+            </div>
+            
+         <ul class="play">
+         <li class="q1"><img src="http://google.github.io/material-design-icons/content/svg/ic_reply_24px.svg" alt=""><br>Reply</li>
+         <li class="q2"><img src="http://google.github.io/material-design-icons/content/svg/ic_reply_all_24px.svg" alt=""><br>Reply all</li>
+            <li class="q3"><img src="http://google.github.io/material-design-icons/content/svg/ic_forward_24px.svg" alt=""><br>Forward</li>
+         </ul>   
+      
+                
+          
+        </section>
+    </section>
+  </body>
+  </html>
